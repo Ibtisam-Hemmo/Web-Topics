@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = '/Ibtisam-Hemmo-Project1/'
+    config.base = '/Web-Topics/'
   }
 
   return config
