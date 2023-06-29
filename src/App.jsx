@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { FavoritesProvider, TopicsContainer, ThemeProvider } from "./context";
+import { FavoritesProvider, ThemeProvider } from "./context";
 import { Home, Details, Layout } from "./pages";
 import "./styles/global.css";
 
 function App() {
+
   const router = createBrowserRouter(
     [
       {
@@ -16,16 +17,14 @@ function App() {
         ],
       },
     ],
-    { basename: import.meta.env.DEV ? "/" : "/react-vite-gh-pages/" }
+    { basename: import.meta.env.DEV ? "/" : "/Ibtisam-Hemmo-Project1/" }
   );
 
   return (
     <ThemeProvider>
-      <TopicsContainer>
-        <FavoritesProvider>
-          <RouterProvider router={router} />
-        </FavoritesProvider>
-      </TopicsContainer>
+      <FavoritesProvider>
+        <RouterProvider router={router} />
+      </FavoritesProvider>
     </ThemeProvider>
   );
 }
